@@ -111,7 +111,7 @@ const turnCards = (event) => {
             if (foundPairs === rows * columns) {
                 clockIsRunning = false
                 removeClickListener()
-                message.innerHTML = `Congratulation! You found all the <span style="color:red">${rows*columns/2} pairs </span>in <span style="color:red">${clicks+1} steps</span> under <span style="color:red">${Math.floor(startTime.getMinutes())}:${Math.floor(startTime.getSeconds()-1)}</span> !`
+                message.innerHTML = `Congratulation! You found all the <span style="color:red">${rows*columns/2} pairs </span>in <span style="color:red">${clicks+1} steps</span> under <span style="color:red">${minutes}:${seconds}</span> !`
                 setTimeout(() => {
                     newGame()
                 }, 5000)
@@ -147,8 +147,9 @@ const timeCounter = () => {
 
         setTimeout(timeCounter, 1000)
 
+        return minutes, seconds
+
     }
-    return startTime
 }
 
 const startGame = () => {
