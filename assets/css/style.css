@@ -1,0 +1,214 @@
+@font-face {
+    font-family: "Roboto", sans-serif;
+    font-family: 'Indie Flower', cursive;
+}
+
+body {
+    margin: 0 15%;
+    padding: 0;
+    border: 0;
+    font-family: "Roboto";
+    background-image: url('../../img/background_playing_cards_gambling_game_entertainment-1153923.jpg');
+    background-size: 100%;
+}
+
+h1,
+h2 {
+    color: black;
+    text-shadow: 1px 1px black;
+    text-align: center;
+    margin-block-end: 0em;
+
+}
+
+h1 {
+    font-size: 3em;
+    margin-block-start: 20%;
+    padding-left: 27%;
+}
+
+h2 {
+    font-size: 2em;
+    margin-block-start: 0.2em;
+    padding-left: 27%;
+}
+
+#gameboard {
+    margin-top: 10%;
+    margin: auto;
+}
+
+.card {
+    width: 150px;
+    height: 220px;
+    padding: 5px;
+    background-color: transparent;
+    perspective: 1000px;
+}
+
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s;
+    transform-style: preserve-3d;
+}
+
+.back {
+    position: absolute;
+    backface-visibility: hidden;
+}
+
+.front {
+    transform: rotateX(180deg);
+    position: absolute;
+    backface-visibility: hidden;
+}
+
+.counter,
+.clickCounter {
+    background-color: darkgray;
+    padding: 0.3em;
+    border-radius: 10px;
+    font-size: 3em;
+    font-weight: 900;
+    position: absolute;
+    margin-top: 1%;
+    margin-left: 7%;
+}
+
+.counter {
+    z-index: 1;
+    padding-right: 0;
+}
+
+.clickCounter {
+    padding-left: 200px;
+}
+
+.difficulty {
+    font-size: 1.3em;
+    float: right;
+    background-color: darkgray;
+    padding: 1.5em 0.3em;
+    border-radius: 10px;
+    font-weight: 900;
+    margin-top: 1%;
+}
+
+.music {
+    position: fixed;
+    top: 0.5rem;
+    right: 0.5rem;
+}
+
+@media only screen and (max-width: 1600px) {
+    body {
+        margin: 0 10%;
+    }
+}
+
+@media only screen and (max-width: 1350px) {
+    body {
+        margin: 0 5%;
+    }
+}
+
+@media only screen and (max-width: 1150px) {
+    body {
+        margin: 0;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    body {
+        margin: 0;
+
+    }
+
+    h1,
+    h2 {
+        margin-block-start: 0.1em;
+        margin-block-end: 0.1em;
+        padding: 0;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    h2 {
+        font-size: 0.8rem;
+    }
+
+    .message {
+        font-size: 0.8rem;
+    }
+
+
+    .counter,
+    .clickCounter {
+        position: static;
+        display: block;
+        margin: auto;
+        width: 20%;
+        text-align: center;
+        padding: 0.1em;
+        font-size: 1.5em;
+    }
+
+    .counter {
+        margin-top: 15%;
+    }
+
+    .clickCounter {
+        width: 5%;
+    }
+
+
+    .difficulty {
+        position: static;
+        display: block;
+        margin: auto;
+        margin: 0;
+        margin-top: -15%;
+        width: 25%;
+        padding: 0.1em;
+        text-align: center;
+        font-size: 1em;
+    }
+
+    #gameboard {
+        margin: 0 5%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        display: inline-block;
+        width: 39px;
+        height: 57px;
+        padding: 3px 1px;
+    }
+
+    .card-inner {
+        position: relative;
+        top:0;
+        left: 0;
+        width: 39px;
+        height: 57px;
+        transition: transform 0.5s;
+        transform-style: preserve-3d;
+        padding: 3px 1px;
+    }
+
+    .music {
+        position: fixed;
+        top: 69%;
+        right: 10%;
+    }
+
+
+
+}
